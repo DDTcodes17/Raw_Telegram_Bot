@@ -1,1 +1,5 @@
 .env
+telbot_env
+telegram_env/
+__pycache__/
+rough.ipynb
