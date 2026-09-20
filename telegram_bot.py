@@ -11,7 +11,7 @@ async def reply(update, context):
         config = {"configurable":{"thread_id":str(update.effective_chat.id)}}
     )
 
-    await update.message.reply_text(result["messages"][-1].content)
+    await update.message.reply_text(result["messages"][-1].content[0]['text'])
 
 app = Application.builder().token(os.getenv("TELEGRAM_TOKEN")).build()
 app.add_handler(MessageHandler(filters.TEXT, reply))
